@@ -1,0 +1,8 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    "Item":["Television","Home Theater","Television","Cell Phone","Television"],
+    "Units":[95,50,36,27,56]
+})
+
+print(df.pivot_table(values="Units", index="Item", aggfunc="sum"))
