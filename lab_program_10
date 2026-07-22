@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(np.random.randn(10,4), columns=["B","C","D","E"])
+df.insert(0, "A", range(1,11))
+
+def color(x):
+    return "color:red" if x < 0 else "color:black"
+
+df.style.map(color, subset=["B","C","D","E"])
