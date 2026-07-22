@@ -1,0 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame({
+    "Date": ["2024-01-01","2024-01-02","2024-01-03","2024-01-04"],
+    "Volume": [1200, 1800, 1500, 2000]
+})
+
+df["Date"] = pd.to_datetime(df["Date"])
+
+plt.bar(df["Date"], df["Volume"])
+plt.title("Alphabet Trading Volume")
+plt.xlabel("Date")
+plt.ylabel("Volume")
+plt.xticks(rotation=45)
+plt.show()
