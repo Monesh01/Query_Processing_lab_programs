@@ -1,0 +1,8 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    "Name": ["Alberto Franco", "Gino Mcneill", "Ryan Parkes", "Esha Hinton"],
+    "Class": ["V", "V", "VI", "VI"]
+})
+
+print(df["Name"].str.find("o"))
