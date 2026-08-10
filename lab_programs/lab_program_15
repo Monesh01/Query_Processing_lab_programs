@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({
+    "ord_no": [np.nan, np.nan, 70002, np.nan, np.nan, 70005],
+    "purch_amt": [np.nan, 270.65, 65.26, np.nan, 948.50, 2400.60],
+    "ord_date": [np.nan, "2012-09-10", np.nan, np.nan, "2012-09-10", "2012-07-27"],
+    "customer_id": [np.nan, 3001, 3001, np.nan, 3002, 3001],
+    "salesman_id": [np.nan, 5003, 5001, np.nan, 5002, 5001]
+})
+
+print(df[df.isnull().sum(axis=1) >= 2])
